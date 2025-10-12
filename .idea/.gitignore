@@ -4,3 +4,7 @@
 .idea/
 *.iml
 *.log
+# Compilados
+out/
+target/
+bin/
