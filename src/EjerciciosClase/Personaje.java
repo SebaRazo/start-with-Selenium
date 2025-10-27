@@ -34,4 +34,7 @@ public abstract class Personaje {
     }
     // Método abstracto
     public abstract void entrenar();
+
+    // Método atacar
+    //public abstract void atacar(Personaje unPersonaje); Utilizamos la Interfaz.
 }

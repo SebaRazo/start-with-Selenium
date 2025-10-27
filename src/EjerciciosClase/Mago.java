@@ -1,6 +1,6 @@
 package EjerciciosClase;
 
-public class Mago extends Personaje {
+public class Mago extends Personaje implements Ofensivo{
     private int poder;
     private String tipoMagia; // Dos opciones: "Encantamiento" o "Maléfico"
     public Mago(String nombre, int salud, int poder, String tipoMagia) {
@@ -36,4 +36,11 @@ public class Mago extends Personaje {
     }
 
     // Método atacar
+    @Override
+    public void atacar(Personaje unPersonaje) {
+        int danio = poder * 5;
+        System.out.println(getNombre() + " está atacando a " + unPersonaje.getNombre() +
+                " con un daño de " + danio);
+        unPersonaje.setSalud(unPersonaje.getSalud() - danio);
+    }
 }

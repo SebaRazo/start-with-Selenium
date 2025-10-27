@@ -1,6 +1,6 @@
 package EjerciciosClase;
 
-public class Torre extends Personaje {
+public class Torre extends Personaje implements Ofensivo {
     private int nivel;
     public Torre(String nombre, int salud, int nivel) {
         super(nombre, salud);
@@ -16,5 +16,10 @@ public class Torre extends Personaje {
     public void entrenar() {
         nivel += 1;
         System.out.println(getNombre() + " ha entrenado. Nivel actual: " + nivel);
+    }
+
+    @Override
+    public void atacar(Personaje unPersonaje) {
+
     }
 }

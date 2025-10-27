@@ -1,6 +1,6 @@
 package EjerciciosClase;
 
-public class Espadachin extends Personaje {
+public class Espadachin extends Personaje implements Ofensivo{
     private int fuerza;
     public Espadachin(String nombre, int salud, int fuerza){
         super(nombre, salud);
@@ -22,4 +22,11 @@ public class Espadachin extends Personaje {
         System.out.println(getNombre() + " ha entrenado. Fuerza actual: " + fuerza);
     }
     // Método atacar
+    @Override
+    public void atacar(Personaje unPersonaje) {
+        int danio = fuerza *2;
+        System.out.println(getNombre() + " está atacando a " + unPersonaje.getNombre() +
+                " con un daño de " + danio);
+        unPersonaje.setSalud(unPersonaje.getSalud() - danio);
+    }
 }
